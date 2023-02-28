@@ -1,0 +1,17 @@
+.btn {
+	padding: 1rem 2rem;
+    background: $white;
+    border-radius: 8px;
+    font-family: $headings-font-family;
+    font-weight: 700;
+
+    &.btn-primary {
+    	color: $turquoise;
+    	border: 2px solid $turquoise;
+
+    	&:hover {
+    		background: $turquoise;
+    		color: $white;
+    	}
+    }
+}

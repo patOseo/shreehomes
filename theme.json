@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "typography": {
+            "fontWeight": true
+        },
+        "color": {
+            "palette": [
+                {
+                    "slug": "turqoise",
+                    "color": "#065769",
+                    "name": "Turqoise"
+                },
+                {
+                    "slug": "lightaqua",
+                    "color": "#1293aa",
+                    "name": "Light Aqua"
+                },
+                {
+                    "slug": "lightgrey",
+                    "color": "#e8e8e8",
+                    "name": "Light Grey"
+                },
+                {
+                    "slug": "darkblue",
+                    "color": "#202c5e",
+                    "name": "Dark Blue"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "1150px",
+            "wideSize": "1800px"
+        }
+    }
+}

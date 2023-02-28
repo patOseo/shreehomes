@@ -1,0 +1,24 @@
+.gform_body {
+	input, textarea {
+		margin: 0rem !important;
+	    padding: .75rem 1rem !important;
+	    border-radius: 8px;
+	    border: 1px solid rgba(6,87,105,.45);
+	}
+} 
+
+.gform_button {
+	padding: .75rem 1rem;
+    background: 0 0;
+    color: $turquoise;
+    border: 2px solid $turquoise;
+    border-radius: 8px;
+    font-family: $headings-font-family;
+    font-weight: 700;
+    transition: 0.2s;
+
+    &:hover {
+    	background: $turquoise;
+    	color: #fff;
+    }
+}

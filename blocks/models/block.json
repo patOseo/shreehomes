@@ -1,0 +1,12 @@
+{
+    "name": "acf/models",
+    "title": "Home Models",
+    "description": "A block to display home models.",
+    "icon": "home",
+    "keywords": ["homes", "models"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "home-models.php"
+    },
+    "align": "full"
+}

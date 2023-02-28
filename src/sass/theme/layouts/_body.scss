@@ -1,0 +1,10 @@
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.alignfull {
+	@include media-breakpoint-down(lg) {
+		padding-left: .75rem;
+		padding-right: .75rem;
+	}
+}
