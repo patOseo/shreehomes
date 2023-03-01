@@ -93,6 +93,8 @@ function understrap_child_customize_controls_js() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
+add_theme_support( 'align-wide' );
+
 require_once('functions/post-types.php');
 require_once('functions/acf.php');
 require_once('functions/blocks.php');

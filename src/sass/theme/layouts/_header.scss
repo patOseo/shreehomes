@@ -5,8 +5,13 @@
 
 .main-logo {
 	max-width: 280px;
-	@include media-breakpoint-up(lg) {
-		max-width: initial;
+	
+	@include media-breakpoint-up(md) {
+		max-width: 350px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		max-width: 450px;
 	}
 }
 
@@ -14,14 +19,18 @@
 .navbar-expand-lg .navbar-nav {
 	.nav-link {
 		margin: 0 10px !important;
-		padding: 0.7rem 1.5rem !important;
+		padding: 0.5rem 1rem !important;
 		font-family: $headings-font-family;
 		font-weight: 500;
+		font-size: 1rem;
 		color: $primary;
-		font-size: 1.35rem;
 		border-radius: 6px;
 		border: 2px solid #fff;
 		transition: .2s;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 1.35rem;
+		}
 
 		&:hover {
 		    border: 2px solid #065769;

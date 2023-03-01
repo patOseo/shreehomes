@@ -14282,22 +14282,32 @@ body {
 .main-logo {
   max-width: 280px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .main-logo {
-    max-width: initial;
+    max-width: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-logo {
+    max-width: 450px;
   }
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
   margin: 0 10px !important;
-  padding: 0.7rem 1.5rem !important;
+  padding: 0.5rem 1rem !important;
   font-family: "Quicksand", arial, sans-serif;
   font-weight: 500;
+  font-size: 1rem;
   color: #065769;
-  font-size: 1.35rem;
   border-radius: 6px;
   border: 2px solid #fff;
   transition: 0.2s;
+}
+@media (min-width: 1200px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.35rem;
+  }
 }
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   border: 2px solid #065769;
