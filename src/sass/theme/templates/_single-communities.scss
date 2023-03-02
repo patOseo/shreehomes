@@ -1,0 +1,27 @@
+.single-communities {
+	.main-hero {
+		background-position: center;
+		background-repeat: no-repeat;
+
+		.hero-overlay {
+			background: rgba($turquoise, .5);
+		}
+	}
+
+	.phase {
+		background: #f4f4f4;
+		border-radius: 16px;
+	}
+}
+
+.community-box {
+	margin-top: -6rem;
+	background: $white;
+	box-shadow: 0 -10px 51px 1px rgba(0,0,0,.15);
+}
+
+.nav-tabs {
+	.active {
+		background-color: $primary !important;
+	}
+}

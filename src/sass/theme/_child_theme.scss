@@ -6,6 +6,11 @@
 @import "layouts/hero";
 @import "layouts/footer";
 
+// Templates
+@import "templates/single-communities";
+
 // Components
+@import "components/colors";
 @import "components/buttons";
 @import "components/gforms";
+@import "components/divider";

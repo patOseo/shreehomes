@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div id="wrapper-footer-full" class="py-5">
-	<div class="container">
+	<div class="container text-center text-lg-start">
 		<div class="row">
 			<div class="col-lg-4">
 				<img class="mb-5 mb-lg-0" src="/wp-content/uploads/2019/07/square-logo.png" alt="Shree Homes">

@@ -1,0 +1,12 @@
+hr.divider {
+	margin: 2rem 0;
+    border-width: 6px;
+    max-width: 80px;
+    height: 6px;
+    opacity: 1;
+
+    &.lightturquoise {
+    	border-color: $lightturquoise;
+    	color: $lightturquoise;
+    }
+}

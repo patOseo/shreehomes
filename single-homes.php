@@ -38,7 +38,7 @@ $community = get_field('community');
 							<div class="mb-4"><?php the_post_thumbnail('full'); ?></div>
 							<?php the_field('description'); ?>
 						</div>
-						<div class="col-lg-3 home-extra">
+						<div class="col-lg-3 home-extra text-center">
 							<?php if($community): $post = $community; $commimg = get_field('logo'); ?>
 							<div class="home-community">
 								<h4 class="h5">Community:</h4>

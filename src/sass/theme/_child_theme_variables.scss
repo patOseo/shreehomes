@@ -4,12 +4,13 @@
 
 
 // Colors
-$turquoise: #065769; // Thats a sample how you could change a BootStrap variable.
+$turquoise: #065769;
+$lightturquoise: #43c8f5;
 $lightgrey: #e8e8e8;
 $dark: #303030;
 $white: #fff;
 
-$primary: $turquoise;  // Once we've changed the value, we'll also make it the primary brand color.
+$primary: $turquoise;
 
 
 // Typography
@@ -37,3 +38,5 @@ $container-max-widths: (
   xxl: 1150px
 ) !default;
 // scss-docs-end container-max-widths
+
+$enable-negative-margins: true;

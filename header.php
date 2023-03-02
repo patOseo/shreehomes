@@ -32,6 +32,9 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+<?php if(is_singular('communities')): ?>
+	<?php get_template_part('global-templates/modal', 'register'); ?>
+<?php endif; ?>
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
