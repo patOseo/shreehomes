@@ -10,7 +10,7 @@
    max-width: inherit !important;
 }
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN315xHTj8ndDXH0FZiBO5YEH0JIRgHUQ"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_field('google_api_key', 'option'); ?>"></script>
 <script type="text/javascript">
 (function( $ ) {
 
