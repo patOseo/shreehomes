@@ -12191,6 +12191,9 @@ body {
 .single-communities .main-hero .hero-overlay {
   background: rgba(6, 87, 105, 0.5);
 }
+.single-communities .main-hero h1, .single-communities .main-hero .h1 {
+  top: -3rem;
+}
 .single-communities .phase {
   background: #f4f4f4;
   border-radius: 16px;
@@ -12271,6 +12274,22 @@ hr.divider.lightturquoise {
   border-color: #43c8f5;
   color: #43c8f5;
 }
+hr.divider.turquoise {
+  border-color: #065769;
+  color: #065769;
+}
+hr.divider.white {
+  border-color: #fff;
+  color: #fff;
+}
+hr.divider.black {
+  border-color: #000;
+  color: #000;
+}
+hr.divider.grey {
+  border-color: #e8e8e8;
+  color: #e8e8e8;
+}
 
 .community-block {
   border-radius: 6px;
@@ -12278,14 +12297,14 @@ hr.divider.lightturquoise {
   background-position: center;
   background-size: cover;
   overflow: hidden;
-  transition: transform 0.2s;
 }
-.community-block:hover {
-  transform: scale(1.025);
+.community-block:hover .community-overlay {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .community-overlay {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.85);
+  transition: 0.2s;
 }
 
 .components-circular-option-picker__option {

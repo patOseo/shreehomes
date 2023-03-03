@@ -15,7 +15,7 @@ $comms = new WP_Query($args);
 <?php if($comms->have_posts()): ?>
 
 	<div class="communities py-4">
-		<div class="row justify-content-center">
+		<div class="row justify-content-center gx-3">
 			<?php while($comms->have_posts()): $comms->the_post(); ?>
 				<?php 
 					if(get_the_post_thumbnail()) {
@@ -24,9 +24,9 @@ $comms = new WP_Query($args);
 						$bg = wp_get_attachment_image_url(get_field('default_bg', 'option'), '4x3');
 					}
 				?>
-				<div class="col-lg-4">
+				<div class="col-lg-4 mb-3 mb-lg-0">
 					<div class="community-block text-center position-relative" style="background-image:url('<?= $bg; ?>');">
-						<div class="community-overlay py-5 position-relative top-0 start-0 w-100 h-100">
+						<div class="community-overlay py-4 py-lg-5 position-relative top-0 start-0 w-100 h-100">
 							<a href="<?php the_permalink(); ?>" class="stretched-link text-decoration-none">
 								<h3 class="h4"><?php the_title(); ?></h3>
 							</a>

@@ -1,0 +1,12 @@
+{
+    "name": "acf/divider",
+    "title": "Divider",
+    "description": "A block to display a divider.",
+    "icon": "minus",
+    "keywords": ["divider", "separator"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "divider.php"
+    },
+    "align": "full"
+}

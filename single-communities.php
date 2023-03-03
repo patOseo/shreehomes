@@ -31,7 +31,7 @@ $gallery = get_field('gallery');
 	<div class="main-hero" style="background-image:url('<?= $background; ?>');">
 		<div class="hero-overlay py-4">
 			<div class="container py-5">
-				<h1 class="text-white text-center py-5"><?php the_title(); ?></h1>
+				<h1 class="text-white text-center mb-0 py-5 position-relative"><?php the_title(); ?></h1>
 			</div>
 		</div>
 	</div>

@@ -4,13 +4,15 @@
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	transition: transform .2s;
 
 	&:hover {
-		transform: scale(1.025);
+		.community-overlay {
+			background: rgba($white, .5);
+		}
 	}
 }
 
 .community-overlay {
-	background: rgba($white, .5);
+	background: rgba($white, .85);
+	transition: .2s;
 }

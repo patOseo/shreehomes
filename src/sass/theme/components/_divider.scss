@@ -9,4 +9,25 @@ hr.divider {
     	border-color: $lightturquoise;
     	color: $lightturquoise;
     }
+
+    &.turquoise {
+    	border-color: $primary;
+    	color: $primary;
+    }
+
+    &.white {
+    	border-color: $white;
+    	color: $white;
+    }
+
+    &.black {
+    	border-color: $black;
+    	color: $black;
+    }
+
+    &.grey {
+    	border-color: $lightgrey;
+    	color: $lightgrey;
+    }
 }
+
