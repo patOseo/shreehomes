@@ -31,7 +31,7 @@ $gallery = get_field('gallery');
 	<div class="main-hero" style="background-image:url('<?= $background; ?>');">
 		<div class="hero-overlay py-4">
 			<div class="container py-5">
-				<div class="h1 text-white text-center py-5"></div>
+				<h1 class="text-white text-center py-5"><?php the_title(); ?></h1>
 			</div>
 		</div>
 	</div>
@@ -40,7 +40,7 @@ $gallery = get_field('gallery');
 		<div class="community-box bg-white px-lg-5 pb-5">
 			<div class="row align-items-center pb-3">
 				<div class="col-12">
-					<div class="text-center"><?php echo wp_get_attachment_image($logo, 'full'); ?></div>
+					<div class="text-center my-4"><?php echo wp_get_attachment_image($logo, 'thumbnail'); ?></div>
 					<div class="h6 fw-light text-center text-uppercase">
 						<?php echo $city; ?> <?php if($city && $region) { ?><span class="px-4">|</span><?php } echo $region; ?>
 					</div>
@@ -56,24 +56,19 @@ $gallery = get_field('gallery');
 		</div>
 	</div>
 
-	<?php if( $map ): ?>
-    <div class="acf-map my-5" data-zoom="16">
-        <div class="marker" data-lat="<?php echo esc_attr($map['lat']); ?>" data-lng="<?php echo esc_attr($map['lng']); ?>"></div>
-    </div>
-	<?php endif; ?>
-
 	<div class="<?php echo esc_attr( $container ); ?> py-5" id="content" tabindex="-1">
 
 		<nav>
 		  <div class="border border-light nav nav-tabs nav-pills nav-fill" id="nav-tab" role="tablist">
 		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link active" id="nav-phases-tab" data-bs-toggle="tab" data-bs-target="#tabPhases" type="button" role="tab" aria-controls="tab-phases" aria-selected="true"><i class="fa fa-flag me-2"></i> Phases</button>
-		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-models-tab" data-bs-toggle="tab" data-bs-target="#tabModels" type="button" role="tab" aria-controls="tab-models" aria-selected="false"><i class="fa fa-home me-2"></i> Available Models</button>
+		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-models-tab" data-bs-toggle="tab" data-bs-target="#tabModels" type="button" role="tab" aria-controls="tab-models" aria-selected="false"><i class="fa fa-home me-2"></i> Models</button>
 		  	<button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-gallery-tab" data-bs-toggle="tab" data-bs-target="#tabGallery" type="button" role="tab" aria-controls="tab-gallery" aria-selected="false"><i class="fa fa-picture-o me-2"></i> Gallery</button>
+		  	<button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-map-tab" data-bs-toggle="tab" data-bs-target="#tabMap" type="button" role="tab" aria-controls="tab-map" aria-selected="false"><i class="fa fa-map-marker me-2"></i> Map</button>
 		  </div>
 		</nav>
 
-		<div class="tab-content py-5">
-			<div class="tab-pane fade show active py-4" id="tabPhases">
+		<div class="tab-content py-4">
+			<div class="tab-pane fade show active py-3" id="tabPhases">
 				<?php if(have_rows('phases')): ?>
 					<div class="phases border-light">
 						<div class="row">
@@ -115,7 +110,7 @@ $gallery = get_field('gallery');
 					<p class="text-center">There are currently no phases available for this community.</p>
 				<?php endif; ?>
 			</div>
-			<div class="tab-pane fade py-4" id="tabModels">
+			<div class="tab-pane fade py-3" id="tabModels">
 				<?php if($models): ?>
 					<section class="homes-section">
 						<div class="row">
@@ -134,10 +129,18 @@ $gallery = get_field('gallery');
 					<p class="text-center">There are no available models for this community.</p>
 				<?php endif; ?>
 			</div>
-			<div class="tab-pane fade py-4" id="tabGallery">
+			<div class="tab-pane fade py-3" id="tabGallery">
 				<?php if($gallery): ?>
 				<?php else: ?>
 					<p class="text-center">No gallery available for this community.</p>
+				<?php endif; ?>
+			</div>
+
+			<div class="tab-pane fade py-3" id="tabMap">
+				<?php if( $map ): ?>
+    				<div class="acf-map" data-zoom="16">
+    				    <div class="marker" data-lat="<?php echo esc_attr($map['lat']); ?>" data-lng="<?php echo esc_attr($map['lng']); ?>"></div>
+    				</div>
 				<?php endif; ?>
 			</div>
 		</div>

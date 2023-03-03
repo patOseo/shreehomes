@@ -12272,6 +12272,22 @@ hr.divider.lightturquoise {
   color: #43c8f5;
 }
 
+.community-block {
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.community-block:hover {
+  transform: scale(1.025);
+}
+
+.community-overlay {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 .components-circular-option-picker__option {
   border-radius: 50%;
 }

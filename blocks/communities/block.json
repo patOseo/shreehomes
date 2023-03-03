@@ -1,0 +1,12 @@
+{
+    "name": "acf/communities",
+    "title": "Communities",
+    "description": "A block to display communities.",
+    "icon": "admin-multisite",
+    "keywords": ["communities", "community"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "communities.php"
+    },
+    "align": "full"
+}
