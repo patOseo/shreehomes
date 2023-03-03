@@ -60,7 +60,7 @@ $gallery = get_field('gallery');
 
 		<nav>
 		  <div class="border border-light nav nav-tabs nav-pills nav-fill" id="nav-tab" role="tablist">
-		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link active" id="nav-phases-tab" data-bs-toggle="tab" data-bs-target="#tabPhases" type="button" role="tab" aria-controls="tab-phases" aria-selected="true"><i class="fa fa-flag me-2"></i> Phases</button>
+		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link active" id="nav-phases-tab" data-bs-toggle="tab" data-bs-target="#tabPhases" type="button" role="tab" aria-controls="tab-phases" aria-selected="true"><i class="fa fa-map-o me-2"></i> Site Plans</button>
 		    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-models-tab" data-bs-toggle="tab" data-bs-target="#tabModels" type="button" role="tab" aria-controls="tab-models" aria-selected="false"><i class="fa fa-home me-2"></i> Models</button>
 		  	<button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-gallery-tab" data-bs-toggle="tab" data-bs-target="#tabGallery" type="button" role="tab" aria-controls="tab-gallery" aria-selected="false"><i class="fa fa-picture-o me-2"></i> Gallery</button>
 		  	<button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-map-tab" data-bs-toggle="tab" data-bs-target="#tabMap" type="button" role="tab" aria-controls="tab-map" aria-selected="false"><i class="fa fa-map-marker me-2"></i> Map</button>
@@ -71,31 +71,37 @@ $gallery = get_field('gallery');
 			<div class="tab-pane fade show active py-3" id="tabPhases">
 				<?php if(have_rows('phases')): ?>
 					<div class="phases border-light">
-						<div class="row">
+						<div class="row justify-content-center">
 							<?php while(have_rows('phases')): the_row(); ?>
-							<?php 
-								if(get_sub_field('sold') == 1) {
-									$phasetitle = '<s>' . get_sub_field('phase_title') . '</s> SOLD';
-								} else {
-									$phasetitle = get_sub_field('phase_title');
-								}
-							?>
 								<div class="col-lg-6 mb-3 mb-lg-0">
 									<div class="phase p-4 h-100">
-										<h3 class="h3 mb-0 py-2 text-center"><?= $phasetitle; ?></h3>
+										<h3 class="h3 mb-0 py-2 text-center"><?php the_sub_field('phase_title'); ?></h3>
 										<hr class="divider mt-3 mb-5 mx-auto">
 										<?php if(get_sub_field('phase_plan')): ?>
-											<div class="ratio ratio-4x3">
+
 												<figure class="wp-block-gallery">
-													<figure class="wp-block-image">
-														<a href="<?php echo wp_get_attachment_image_url(get_sub_field('phase_plan'), 'full'); ?>"><?php echo wp_get_attachment_image(get_sub_field('phase_plan'), 'full'); ?></a>	
+													<figure class="wp-block-image position-relative">
+														<?php if(get_sub_field('sold') ==1): ?>
+															<img src="/wp-content/themes/shreehomes/images/sold-out.png" alt="Sold Icon" class="position-absolute top-50 start-50 translate-middle">
+														<?php endif; ?>
+														<a class="stretched-link" href="<?php echo wp_get_attachment_image_url(get_sub_field('phase_plan'), 'full'); ?>"><?php echo wp_get_attachment_image(get_sub_field('phase_plan'), 'full'); ?></a>	
 													</figure>
 												</figure>
-											</div>
+
 										<?php else: ?>
 											<h3 class="h4 text-center">
 												<?php if(get_sub_field('sold') != 1) : ?>
-													Coming Soon!
+														<div class="position-relative">
+															<?php 
+																// if(get_the_post_thumbnail()) {
+																// 	the_post_thumbnail('4x3');
+																// } else {
+																// 	echo wp_get_attachment_image(get_field('default_bg', 'option'), '4x3', '', array('class' => 'w-100 h-100 opacity-25'));
+																// } 
+															?>
+															<img src="/wp-content/themes/shreehomes/images/coming-soon.jpeg" alt="Coming Soon" class="w-100 h-100 opacity-25">
+															<p class="mb-0 h3 position-absolute top-50 start-50 translate-middle">Coming Soon!</p>
+														</div>
 												<?php else: ?>
 													This phase is sold.
 												<?php endif; ?>
@@ -107,7 +113,7 @@ $gallery = get_field('gallery');
 						</div>
 					</div>
 				<?php else: ?>
-					<p class="text-center">There are currently no phases available for this community.</p>
+					<p class="text-center">There are currently no site plans available for this community.</p>
 				<?php endif; ?>
 			</div>
 			<div class="tab-pane fade py-3" id="tabModels">
