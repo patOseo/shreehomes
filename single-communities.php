@@ -92,18 +92,14 @@ $gallery = get_field('gallery');
 											<h3 class="h4 text-center">
 												<?php if(get_sub_field('sold') != 1) : ?>
 														<div class="position-relative">
-															<?php 
-																// if(get_the_post_thumbnail()) {
-																// 	the_post_thumbnail('4x3');
-																// } else {
-																// 	echo wp_get_attachment_image(get_field('default_bg', 'option'), '4x3', '', array('class' => 'w-100 h-100 opacity-25'));
-																// } 
-															?>
 															<img src="/wp-content/themes/shreehomes/images/coming-soon.jpeg" alt="Coming Soon" class="w-100 h-100 opacity-25">
 															<p class="mb-0 h3 position-absolute top-50 start-50 translate-middle">Coming Soon!</p>
 														</div>
 												<?php else: ?>
-													This phase is sold.
+													<div class="position-relative">
+														<img src="/wp-content/themes/shreehomes/images/sold-out.png" style="z-index:99;" alt="Sold Icon" class="position-absolute top-50 start-50 translate-middle">
+														<img src="/wp-content/themes/shreehomes/images/coming-soon.jpeg" alt="Coming Soon" class="w-100 h-100 opacity-25">
+													</div>
 												<?php endif; ?>
 											</h3>
 										<?php endif; ?>
