@@ -35,7 +35,7 @@ $homes = new WP_Query($homeargs);
 	 	<div class="row">
 	 		<div class="col-12">
 	 			<div class="mt-4 w-100 text-center">
-	 				<a class="btn btn-md btn-primary" href="/homes/">See All Models</a>
+	 				<a class="btn btn-md btn-primary" href="/models/">See All Models</a>
 	 			</div>
 	 		</div>
 	 	</div>
