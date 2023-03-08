@@ -1,4 +1,4 @@
-.single-communities {
+.single-homes {
 	.main-hero {
 		background-position: center;
 		background-repeat: no-repeat;
@@ -18,8 +18,15 @@
 	}
 }
 
-.community-box {
+.hero-box {
 	margin-top: -6rem;
+
+	img {
+		@include media-breakpoint-up(lg) {
+			margin-top: -6rem;
+			border: 12px solid #fff;
+		}
+	}
 	
 	.shadow {
 		box-shadow: 0 -10px 51px 1px rgba(0,0,0,.15);

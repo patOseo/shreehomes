@@ -3,19 +3,19 @@
 function create_posttype() {
     // Our Homes
     $homes_label = array(
-        'name' => 'Homes',
-        'singular_name' => 'Home',
-        'add_new' => 'Add Home',
-        'add_new_item' => 'Add New Home',
-        'edit_item' => 'Edit Home',
-        'new_item' => 'New Home',
-        'all_items' => 'All Homes',
-        'view_item' => 'View Home',
-        'search_items' => 'Search Homes',
-        'not_found' => 'No Homes found',
-        'not_found_in_trash' => 'No Homes found in Trash',
+        'name' => 'Models',
+        'singular_name' => 'Model',
+        'add_new' => 'Add Model',
+        'add_new_item' => 'Add New Model',
+        'edit_item' => 'Edit Model',
+        'new_item' => 'New Model',
+        'all_items' => 'All Models',
+        'view_item' => 'View Model',
+        'search_items' => 'Search Models',
+        'not_found' => 'No Models found',
+        'not_found_in_trash' => 'No Models found in Trash',
         'parent_item_colon' => '',
-        'menu_name' => 'Homes',
+        'menu_name' => 'Models',
     );
     $homes_args = array (
         'labels' => $homes_label,

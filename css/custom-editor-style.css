@@ -12193,7 +12193,7 @@ body {
 .single-communities .main-hero .hero-overlay {
   background: rgba(6, 87, 105, 0.5);
 }
-.single-communities .main-hero h1, .single-communities .main-hero .h1 {
+.single-communities .main-hero .title-box {
   top: -3rem;
 }
 .single-communities .phase {
@@ -12203,7 +12203,40 @@ body {
 
 .community-box {
   margin-top: -6rem;
-  background: #fff;
+}
+.community-box .shadow {
+  box-shadow: 0 -10px 51px 1px rgba(0, 0, 0, 0.15);
+}
+
+.nav-tabs .active {
+  background-color: #065769 !important;
+}
+
+.single-homes .main-hero {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.single-homes .main-hero .hero-overlay {
+  background: rgba(6, 87, 105, 0.5);
+}
+.single-homes .main-hero .title-box {
+  top: -3rem;
+}
+.single-homes .phase {
+  background: #f4f4f4;
+  border-radius: 16px;
+}
+
+.hero-box {
+  margin-top: -6rem;
+}
+@media (min-width: 992px) {
+  .hero-box img {
+    margin-top: -6rem;
+    border: 12px solid #fff;
+  }
+}
+.hero-box .shadow {
   box-shadow: 0 -10px 51px 1px rgba(0, 0, 0, 0.15);
 }
 

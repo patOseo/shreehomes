@@ -31,26 +31,31 @@ $gallery = get_field('gallery');
 	<div class="main-hero" style="background-image:url('<?= $background; ?>');">
 		<div class="hero-overlay py-4">
 			<div class="container py-5">
-				<h1 class="text-white text-center mb-0 py-5 position-relative"><?php the_title(); ?></h1>
+				<div class="py-5 position-relative title-box">
+					<h1 class="text-white text-center mb-0"><?php the_title(); ?></h1>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="container mt-n5">
-		<div class="community-box bg-white px-lg-5 pb-5">
-			<div class="row align-items-center pb-3">
-				<div class="col-12">
-					<div class="text-center my-4"><?php echo wp_get_attachment_image($logo, 'thumbnail'); ?></div>
-					<div class="h6 fw-light text-center text-uppercase">
-						<?php echo $city; ?> <?php if($city && $region) { ?><span class="px-4">|</span><?php } echo $region; ?>
+		<div class="community-box">
+		<p class="mb-2"><a href="/communities/" class="text-decoration-none text-white">&#8249; Back to Communities</a></p>
+			<div class="shadow bg-white px-lg-5 pb-5">
+				<div class="row align-items-center pb-3">
+					<div class="col-12">
+						<div class="text-center my-4"><?php echo wp_get_attachment_image($logo, 'thumbnail'); ?></div>
+						<div class="h6 fw-light text-center text-uppercase">
+							<?php echo $city; ?> <?php if($city && $region) { ?><span class="px-4">|</span><?php } echo $region; ?>
+						</div>
+						<div class="text-center">
+							<div class="py-3"><?php the_content(); ?></div>
+							<button type="button" class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#registerModal">
+								Register for Priority Purchasing
+							</button>
+						</div>
+						
 					</div>
-					<div class="text-center">
-						<div class="py-3"><?php the_content(); ?></div>
-						<button type="button" class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#registerModal">
-							Register for Priority Purchasing
-						</button>
-					</div>
-					
 				</div>
 			</div>
 		</div>
