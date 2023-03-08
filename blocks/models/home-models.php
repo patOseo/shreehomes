@@ -1,5 +1,7 @@
 <?php 
 
+$show_all = get_field('show_all_btn');
+
 if(get_field('max_homes')) {
 	$max_homes = get_field('max_homes');
 } else {
@@ -32,6 +34,7 @@ $homes = new WP_Query($homeargs);
 			<?php endwhile; ?>
 	 	</div>
 
+	 	<?php if($show_all == 1): ?>
 	 	<div class="row">
 	 		<div class="col-12">
 	 			<div class="mt-4 w-100 text-center">
@@ -39,6 +42,7 @@ $homes = new WP_Query($homeargs);
 	 			</div>
 	 		</div>
 	 	</div>
+	 	<?php endif; ?>
 	 </div>
 </section>
 <?php endif; ?>
