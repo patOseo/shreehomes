@@ -63,16 +63,18 @@ $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
 							<?php if(have_rows('3d_floorplans')): ?>
 								<?php while(have_rows('3d_floorplans')): the_row(); $gallery = get_sub_field('3d_plan'); ?>
 									<?php if($gallery): ?>
-										<figure class="is-layout-flex wp-block-gallery has-nested-images columns-4 is-cropped">
-											<?php foreach($gallery as $image_id): ?>
-												<figure class="wp-block-image size-large">
-													<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
-												</figure>
-											<?php endforeach; ?>
-										</figure>
-										<?php if(get_sub_field('plan_3d_pdf')): ?>
-											<div class="w-100 py-4 text-center"><a class="mx-auto btn btn-primary" href="<?php the_sub_field('plan_3d_pdf'); ?>" target="_blank" rel="noopener,noreferrer">Download PDF</a></div>
-										<?php endif; ?>
+										<div class="gallery-section mb-5">
+											<figure class="is-layout-flex wp-block-gallery has-nested-images columns-4 is-cropped">
+												<?php foreach($gallery as $image_id): ?>
+													<figure class="wp-block-image size-large">
+														<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
+													</figure>
+												<?php endforeach; ?>
+											</figure>
+											<?php if(get_sub_field('plan_3d_pdf')): ?>
+												<div class="w-100 py-4 text-center"><a class="mx-auto btn btn-primary" href="<?php the_sub_field('plan_3d_pdf'); ?>" target="_blank" rel="noopener,noreferrer">Download PDF</a></div>
+											<?php endif; ?>
+										</div>
 									<?php else: echo '<p class="text-center py-5">There is currently no 3D plan available.</p>'; endif; ?>
 								<?php endwhile; ?>
 							<?php else: ?>
@@ -83,13 +85,15 @@ $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
 							<?php if(have_rows('black_floorplans')): ?>
 								<?php while(have_rows('black_floorplans')): the_row(); $gallery = get_sub_field('floorplan'); ?>
 									<?php if($gallery): ?>
-										<figure class="is-layout-flex wp-block-gallery has-nested-images columns-4 is-cropped">
-											<?php foreach($gallery as $image_id): ?>
-												<figure class="wp-block-image size-large">
-													<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
-												</figure>
-											<?php endforeach; ?>
-										</figure>
+										<div class="gallery-section mb-5">
+											<figure class="is-layout-flex wp-block-gallery has-nested-images columns-4 is-cropped">
+												<?php foreach($gallery as $image_id): ?>
+													<figure class="wp-block-image size-large">
+														<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
+													</figure>
+												<?php endforeach; ?>
+											</figure>
+										</div>
 										<?php if(get_sub_field('plan_pdf')): ?>
 											<div class="w-100 py-4 text-center"><a class="mx-auto btn btn-primary" href="<?php the_sub_field('plan_pdf'); ?>" target="_blank" rel="noopener,noreferrer">Download PDF</a></div>
 										<?php endif; ?>
