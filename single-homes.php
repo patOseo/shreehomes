@@ -37,7 +37,7 @@ $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
 					<div class="col-12">
 						<div class="text-center my-4">
 							<?php the_post_thumbnail('4x3', array('class' => 'mb-3')); ?>
-							<p><strong><?php the_field('square_footage'); ?> ft² • <?php the_field('floors'); ?> Floors • <?php the_field('beds'); ?> Beds • <?php the_field('baths'); ?> Baths</strong></p>
+							<p><strong><?php the_field('square_footage'); ?> ft² • <?php the_field('floors'); ?> Floors • <?php the_field('beds'); ?> Bedrooms<?php if(get_field('baths')) { ?> • <?php the_field('baths'); ?> Bathrooms<?php } ?></strong></p>
 						<?php the_field('description'); ?>
 						</div>					
 					</div>
