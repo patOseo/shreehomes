@@ -92,8 +92,8 @@ $gallery = get_field('gallery');
 											<h3 class="h4 text-center">
 												<?php if(get_sub_field('sold') != 1) : ?>
 														<div class="position-relative">
-															<img src="/wp-content/themes/shreehomes/images/coming-soon.jpeg" alt="Coming Soon" class="w-100 h-100 opacity-25">
-															<p class="mb-0 h3 position-absolute top-50 start-50 translate-middle">Coming Soon!</p>
+															<img src="/wp-content/themes/shreehomes/images/coming-soon.jpeg" alt="Stay Tuned" class="w-100 h-100 opacity-25">
+															<p class="mb-0 h3 position-absolute top-50 start-50 translate-middle">Stay Tuned!</p>
 														</div>
 												<?php else: ?>
 													<div class="position-relative">
@@ -128,13 +128,13 @@ $gallery = get_field('gallery');
 						</div>
 					</section>
 				<?php else: ?>
-					<p class="text-center">There are no available models for this community.</p>
+					<p class="text-center">There are currently no available models for this community.</p>
 				<?php endif; ?>
 			</div>
 			<div class="tab-pane fade py-3" id="tabGallery">
 				<?php if($gallery): ?>
 				<?php else: ?>
-					<p class="text-center">No gallery available for this community.</p>
+					<p class="text-center">There is currently no gallery available for this community.</p>
 				<?php endif; ?>
 			</div>
 

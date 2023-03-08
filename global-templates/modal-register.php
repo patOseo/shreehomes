@@ -7,7 +7,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <?php gravity_form( 2, false, false, false, '', true ); ?>
+        <?php if(get_field('registration_button') == 1): ?>
+          <?php gravity_form( 2, false, false, false, '', true ); ?>
+        <?php else: ?>
+          <p>Registration is not currently available. Please contact us for more information.</p>
+        <?php endif; ?>
       </div>
     </div>
   </div>
