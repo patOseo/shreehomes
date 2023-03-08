@@ -20,7 +20,7 @@ $homes = new WP_Query($homeargs);
 <?php if ($homes->have_posts()): ?>
 <section class="homes-section py-4">
 	 <div class="container">
-	 	<div class="row justify-content-center homes">
+	 	<div class="row homes">
 			<?php while($homes->have_posts()): $homes->the_post(); ?>
 			<div class="col-lg-4 cell home mb-0 text-center">
 				<a class="text-decoration-none" href="<?php the_permalink(); ?>">
