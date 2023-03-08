@@ -133,6 +133,13 @@ $gallery = get_field('gallery');
 			</div>
 			<div class="tab-pane fade py-3" id="tabGallery">
 				<?php if($gallery): ?>
+					<figure class="is-layout-flex wp-block-gallery has-nested-images columns-3 is-cropped">
+						<?php foreach($gallery as $image_id): ?>
+							<figure class="wp-block-image size-large">
+								<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
+							</figure>
+						<?php endforeach; ?>
+					</figure>
 				<?php else: ?>
 					<p class="text-center">There is currently no gallery available for this community.</p>
 				<?php endif; ?>
