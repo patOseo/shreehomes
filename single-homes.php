@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 $community = get_field('community');
 $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
-
+$img_gallery = get_field('gallery');
 ?>
 
 <div class="wrapper pt-0" id="single-wrapper">
@@ -55,6 +55,7 @@ $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
 					  <div class="border border-light nav nav-tabs nav-pills nav-fill" id="nav-tab" role="tablist">
 					    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link active" id="nav-3d-tab" data-bs-toggle="tab" data-bs-target="#tab3D" type="button" role="tab" aria-controls="tab-3d" aria-selected="true"><i class="fa fa-home me-2"></i> 3D Plan</button>
 					    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-floorplan-tab" data-bs-toggle="tab" data-bs-target="#tabFloorplan" type="button" role="tab" aria-controls="tab-floorplan" aria-selected="false"><i class="fa fa-map-o me-2"></i> Floor Plan</button>
+					    <button class="h5 fw-bold mx-0 p-3 bg-grey rounded-0 nav-link" id="nav-gallery-tab" data-bs-toggle="tab" data-bs-target="#tabGallery" type="button" role="tab" aria-controls="tab-gallery" aria-selected="false"><i class="fa fa-image me-2"></i> Gallery</button>
 					  </div>
 					</nav>
 
@@ -101,6 +102,19 @@ $background = '/wp-content/themes/shreehomes/images/hero-bg.jpg';
 								<?php endwhile; ?>
 							<?php else: ?>
 								<p class="text-center py-5">There is currently no floor plan available.</p>
+							<?php endif; ?>
+						</div>
+						<div class="tab-pane fade py-5" id="tabGallery">
+							<?php if($img_gallery): ?>
+								<figure class="is-layout-flex wp-block-gallery has-nested-images columns-6 is-cropped">
+									<?php foreach($img_gallery as $image_id): ?>
+										<figure class="wp-block-image size-large">
+											<a href="<?php echo wp_get_attachment_image_url($image_id, 'full'); ?>"><?php echo wp_get_attachment_image($image_id, 'full'); ?></a>
+										</figure>
+									<?php endforeach; ?>
+								</figure>
+							<?php else: ?>
+								<p class="text-center py-5">There is currently no gallery available for this model.</p>
 							<?php endif; ?>
 						</div>
 					</div>
