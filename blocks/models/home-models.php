@@ -9,8 +9,8 @@ if(get_field('max_homes')) {
 $homeargs = array(
 	'post_type' => 'homes',
 	'posts_per_page' => $max_homes,
-	'orderby' => 'title',
-	'order' => 'ASC',
+	'orderby' => 'date',
+	'order' => 'DESC',
 );
 
 $homes = new WP_Query($homeargs);
