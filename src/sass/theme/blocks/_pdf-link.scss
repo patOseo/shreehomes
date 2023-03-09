@@ -1,0 +1,8 @@
+.pdflink-block {
+	box-shadow: 1px 5px 20px -6px rgba(0, 0, 0, .25);
+	transition: .2s;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}

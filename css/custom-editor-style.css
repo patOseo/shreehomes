@@ -12342,6 +12342,14 @@ hr.divider.grey {
   transition: 0.2s;
 }
 
+.pdflink-block {
+  box-shadow: 1px 5px 20px -6px rgba(0, 0, 0, 0.25);
+  transition: 0.2s;
+}
+.pdflink-block:hover {
+  transform: scale(1.05);
+}
+
 .components-circular-option-picker__option {
   border-radius: 50%;
 }

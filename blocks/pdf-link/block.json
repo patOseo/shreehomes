@@ -1,0 +1,12 @@
+{
+    "name": "acf/pdflink",
+    "title": "PDF Link",
+    "description": "A block to display communities.",
+    "icon": "pdf",
+    "keywords": ["pdf", "link"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "pdf-link.php"
+    },
+    "align": "full"
+}
